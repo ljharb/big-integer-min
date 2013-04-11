@@ -1,0 +1,29 @@
+{
+	"name": "big-integer-min",
+	"version": "0.0.1",
+	"description": "Given two valid integers in string form, return the smaller of the two.",
+	"author": "Jordan Harband",
+	"main": "index.js",
+	"scripts": {
+		"test": "node test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ljharb/big-integer-min"
+	},
+	"keywords": [
+		"integer",
+		"big",
+		"minimum",
+		"number"
+	],
+	"dependencies": {
+		"is": "~0.2.1"
+	},
+	"devDependencies": {
+		"tape": "~0.3.3"
+	},
+	"license": "MIT",
+	"readmeFilename": "README.md"
+}
+
