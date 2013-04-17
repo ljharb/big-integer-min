@@ -1,6 +1,6 @@
 {
 	"name": "big-integer-min",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Given two valid integers in string form, return the smaller of the two.",
 	"author": "Jordan Harband",
 	"main": "index.js",
@@ -18,7 +18,7 @@
 		"number"
 	],
 	"dependencies": {
-		"is": "~0.2.1"
+		"is": "~0.2.3"
 	},
 	"devDependencies": {
 		"tape": "~0.3.3"
