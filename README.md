@@ -26,7 +26,7 @@ bigIntegerMin('1', '2', function (error, min) {
 ```
 
 ## Tests
-Tests currently use tape - which doesn't work in node 0.10, but works in browserify. Rest assured, they pass.
+Simply run `npm test` in the repo.
 
 [1]: https://npmjs.org/package/big-integer-min
 [2]: http://vb.teelaun.ch/ljharb/big-integer-min.svg
