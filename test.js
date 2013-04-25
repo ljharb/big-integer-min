@@ -2,19 +2,22 @@ var test = require('tape');
 var bigIntMin = require('./index.js');
 
 test('requires a string', function (t) {
-	t.throws(function () { bigIntMin('', 1); }, TypeError, 'throws on first non-string arg');
-	t.throws(function () { bigIntMin(1, ''); }, TypeError, 'throws on second non-string arg');
+	var error = new TypeError('both arguments must be strings');
+	t.throws(function () { bigIntMin('', 1); }, error, 'throws on first non-string arg');
+	t.throws(function () { bigIntMin(1, ''); }, error, 'throws on second non-string arg');
 	t.end();
 });
 
 test('requires a valid integer', function (t) {
-	t.throws(function () { bigIntMin('', '123a'); }, TypeError, 'requires only digits');
-	t.throws(function () { bigIntMin('', '123.3'); }, TypeError, 'requires only digits');
+	var error = new TypeError('both strings must be valid positive, negative, or zero integers');
+	t.throws(function () { bigIntMin('', '123a'); }, error, 'requires only digits');
+	t.throws(function () { bigIntMin('', '123.3'); }, error, 'requires only digits');
 	t.end();
 });
 
 test('does not allow leading zeroes', function (t) {
-	t.throws(function () { bigIntMin('123', '001'); }, TypeError, 'does not allow leading zeroes');
+	var error = new TypeError('both strings must have no leading zeroes');
+	t.throws(function () { bigIntMin('123', '001'); }, error, 'does not allow leading zeroes');
 	t.end();
 });
 
