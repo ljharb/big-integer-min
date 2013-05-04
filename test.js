@@ -1,4 +1,4 @@
-var test = require('tap').test;
+var test = require('tape');
 var bigIntMin = require('./index.js');
 
 test('requires a string', function (t) {
