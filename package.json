@@ -18,10 +18,10 @@
 		"number"
 	],
 	"dependencies": {
-		"is": "~0.2.3"
+		"is": "~0.2.6"
 	},
 	"devDependencies": {
-		"tape": "~1.0.1"
+		"tape": "~1.0.2"
 	},
 	"testling": {
 		"files": "test.js",
