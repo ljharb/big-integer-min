@@ -46,6 +46,16 @@ test('is sync without a callback', function (t) {
 	t.end();
 });
 
+test('is sync without a valid function as a callback', function (t) {
+	t.equal(bigIntMin('1', '2', true), '1', 'true is not function');
+	t.equal(bigIntMin('1', '2', false), '1', 'false is not function');
+	t.equal(bigIntMin('1', '2', '3'), '1', 'string is not function');
+	t.equal(bigIntMin('1', '2', /a/), '1', 'regex is not function');
+	t.equal(bigIntMin('1', '2', {}), '1', 'object is not function');
+	t.equal(bigIntMin('1', '2', []), '1', 'array is not function');
+	t.end();
+});
+
 test('is async with a callback', function (t) {
 	t.plan(2);
 	bigIntMin('123', '123456789', function (error, min) {
