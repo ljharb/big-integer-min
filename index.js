@@ -1,9 +1,15 @@
-var is = require('is');
 var nextTick = (function (undef) {
 	var p = typeof process === 'undefined' ? process : {};
 	var setI = typeof setImmediate !== 'undefined' ? setImmediate : undef;
 	return p.nextTick || setI || function setTimeoutZero(cb) { return setTimeout(cb, 0); };
 }());
+
+var toString = Object.prototype.toString;
+
+var isFunction = function (value) {
+	var isAlert = typeof window !== 'undefined' && value === window.alert;
+	return isAlert || '[object Function]' === toString.call(value);
+};
 
 /* Big Integer Minimum
  *
@@ -14,7 +20,7 @@ var nextTick = (function (undef) {
 var digits = /^\-?[0-9]+$/;
 var leadingZeroes = /^\-?0+[^0]+$/;
 var bigIntegerMinDispatcher = function (numberA, numberB, callback) {
-	if (!is.string(numberA) || !is.string(numberB)) {
+	if (typeof numberA !== 'string' || typeof numberB !== 'string') {
 		throw new TypeError('both arguments must be strings');
 	} else if (!digits.test(numberA) || !digits.test(numberB)) {
 		throw new TypeError('both strings must be valid positive, negative, or zero integers');
@@ -22,7 +28,7 @@ var bigIntegerMinDispatcher = function (numberA, numberB, callback) {
 		throw new TypeError('both strings must have no leading zeroes');
 	}
 
-	if (is.fn(callback)) {
+	if (isFunction(callback)) {
 		nextTick(function () {
 			callback(null, bigIntegerMin(numberA, numberB));
 		});
