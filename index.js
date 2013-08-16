@@ -39,12 +39,12 @@ var bigIntegerMinDispatcher = function (numberA, numberB, callback) {
 
 var bigIntegerMin = function bigIntegerMinimum(numberA, numberB) {
 	var bothNegative = false;
+	var smallest = numberA;
 	if (numberA.charAt(0) === '-' && numberB.charAt(0) === '-') {
 		numberA = numberA.slice(1);
 		numberB = numberB.slice(1);
 		bothNegative = true;
 	}
-	var smallest = numberA;
 	if (numberA !== numberB) {
 		var lengthA = numberA.length;
 		var lengthB = numberB.length;
@@ -66,9 +66,9 @@ var bigIntegerMin = function bigIntegerMinimum(numberA, numberB) {
 			// lengths are the same; both positive
 			smallest = numberA < numberB ? numberA : numberB;
 		}
-	}
-	if (bothNegative) {
-		smallest = '-' + smallest;
+		if (bothNegative) {
+			smallest = '-' + smallest;
+		}
 	}
 	return smallest;
 };
