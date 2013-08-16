@@ -12,7 +12,7 @@ var nextTick = (function (undef) {
  */
 
 var digits = /^\-?[0-9]+$/;
-var leadingZeroes = /^\-?00/;
+var leadingZeroes = /^\-?0+[^0]+$/;
 var bigIntegerMinDispatcher = function (numberA, numberB, callback) {
 	if (!is.string(numberA) || !is.string(numberB)) {
 		throw new TypeError('both arguments must be strings');

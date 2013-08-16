@@ -17,7 +17,10 @@ test('requires a valid integer', function (t) {
 
 test('does not allow leading zeroes', function (t) {
 	var error = new TypeError('both strings must have no leading zeroes');
+	t.throws(function () { bigIntMin('123', '01'); }, error, 'does not allow leading zeroes');
 	t.throws(function () { bigIntMin('123', '001'); }, error, 'does not allow leading zeroes');
+	t.throws(function () { bigIntMin('123', '-01'); }, error, 'does not allow leading zeroes');
+	t.throws(function () { bigIntMin('123', '-001'); }, error, 'does not allow leading zeroes');
 	t.end();
 });
 
