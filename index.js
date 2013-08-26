@@ -1,3 +1,5 @@
+/*globals setImmediate */
+
 var nextTick = (function (undef) {
 	var p = typeof process === 'undefined' ? process : {};
 	var setI = typeof setImmediate !== 'undefined' ? setImmediate : undef;
