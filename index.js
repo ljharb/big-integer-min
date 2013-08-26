@@ -19,23 +19,6 @@ var isFunction = function (value) {
 
 var digits = /^\-?[0-9]+$/;
 var leadingZeroes = /^\-?0+[^0]+$/;
-var bigIntegerMinDispatcher = function (numberA, numberB, callback) {
-	if (typeof numberA !== 'string' || typeof numberB !== 'string') {
-		throw new TypeError('both arguments must be strings');
-	} else if (!digits.test(numberA) || !digits.test(numberB)) {
-		throw new TypeError('both strings must be valid positive, negative, or zero integers');
-	} else if (leadingZeroes.test(numberA) || leadingZeroes.test(numberB)) {
-		throw new TypeError('both strings must have no leading zeroes');
-	}
-
-	if (isFunction(callback)) {
-		nextTick(function () {
-			callback(null, bigIntegerMin(numberA, numberB));
-		});
-	} else {
-		return bigIntegerMin(numberA, numberB);
-	}
-};
 
 var bigIntegerMin = function bigIntegerMinimum(numberA, numberB) {
 	var bothNegative = false;
@@ -73,6 +56,23 @@ var bigIntegerMin = function bigIntegerMinimum(numberA, numberB) {
 	return smallest;
 };
 
+var bigIntegerMinDispatcher = function (numberA, numberB, callback) {
+	if (typeof numberA !== 'string' || typeof numberB !== 'string') {
+		throw new TypeError('both arguments must be strings');
+	} else if (!digits.test(numberA) || !digits.test(numberB)) {
+		throw new TypeError('both strings must be valid positive, negative, or zero integers');
+	} else if (leadingZeroes.test(numberA) || leadingZeroes.test(numberB)) {
+		throw new TypeError('both strings must have no leading zeroes');
+	}
+
+	if (isFunction(callback)) {
+		nextTick(function () {
+			callback(null, bigIntegerMin(numberA, numberB));
+		});
+	} else {
+		return bigIntegerMin(numberA, numberB);
+	}
+};
 bigIntegerMinDispatcher.method = bigIntegerMin;
 
 module.exports = bigIntegerMinDispatcher;
