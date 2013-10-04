@@ -1,8 +1,8 @@
 #big-integer-min <sup>[![Version Badge][2]][1]</sup>
 
-[![Build Status][3]][4] [![dependency status][5]][6]
+[![Build Status][3]][4] [![dependency status][5]][6]  [![dev dependency status][7]][8]
 
-[![browser support][7]][8]
+[![browser support][9]][10]
 
 Given two valid integers in string form, return the smaller of the two.
 
@@ -34,6 +34,8 @@ Simply run `npm test` in the repo.
 [4]: https://travis-ci.org/ljharb/big-integer-min
 [5]: https://david-dm.org/ljharb/big-integer-min.png
 [6]: https://david-dm.org/ljharb/big-integer-min
-[7]: https://ci.testling.com/ljharb/big-integer-min.png
-[8]: https://ci.testling.com/ljharb/big-integer-min
+[7]: https://david-dm.org/ljharb/big-integer-min/dev-status.png
+[8]: https://david-dm.org/ljharb/big-integer-min#info=devDependencies
+[9]: https://ci.testling.com/ljharb/big-integer-min.png
+[10]: https://ci.testling.com/ljharb/big-integer-min
 
