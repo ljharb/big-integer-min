@@ -20,7 +20,7 @@
 	"dependencies": {
 	},
 	"devDependencies": {
-		"tape": "~1.1.0"
+		"tape": "~2.0.0"
 	},
 	"testling": {
 		"files": "test.js",
