@@ -28,6 +28,9 @@ test('works', function (t) {
 	t.equal(bigIntMin('1', '2'), '1', 'works with single digits');
 	t.equal(bigIntMin('-1', '2'), '-1', 'works with positive and negative number');
 	t.equal(bigIntMin('10', '100'), '10', 'works with numbers of different lengths');
+	t.equal(bigIntMin('100', '10'), '10', 'works with numbers of different lengths');
+	t.equal(bigIntMin('-10', '-100'), '-100', 'works with negative numbers of different lengths');
+	t.equal(bigIntMin('-100', '-10'), '-100', 'works with negative numbers of different lengths');
 	t.equal(bigIntMin('0', '3'), '0', 'works with zero');
 	t.equal(bigIntMin('123', '123'), '123', 'works with the same value');
 	t.equal(bigIntMin('-123', '-123'), '-123', 'works with the same negative value');
