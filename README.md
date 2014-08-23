@@ -32,11 +32,11 @@ Simply run `npm test` in the repo.
 
 [1]: https://npmjs.org/package/big-integer-min
 [2]: http://vb.teelaun.ch/ljharb/big-integer-min.svg
-[3]: https://travis-ci.org/ljharb/big-integer-min.png
+[3]: https://travis-ci.org/ljharb/big-integer-min.svg
 [4]: https://travis-ci.org/ljharb/big-integer-min
-[5]: https://david-dm.org/ljharb/big-integer-min.png
+[5]: https://david-dm.org/ljharb/big-integer-min.svg
 [6]: https://david-dm.org/ljharb/big-integer-min
-[7]: https://david-dm.org/ljharb/big-integer-min/dev-status.png
+[7]: https://david-dm.org/ljharb/big-integer-min/dev-status.svg
 [8]: https://david-dm.org/ljharb/big-integer-min#info=devDependencies
 [9]: https://ci.testling.com/ljharb/big-integer-min.png
 [10]: https://ci.testling.com/ljharb/big-integer-min
