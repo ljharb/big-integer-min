@@ -28,7 +28,7 @@ bigIntegerMin('1', '2', function (error, min) {
 ```
 
 ## Tests
-Simply run `npm test` in the repo.
+Simply clone the repo, run `npm install`, and then run `npm test`.
 
 [1]: https://npmjs.org/package/big-integer-min
 [2]: http://vb.teelaun.ch/ljharb/big-integer-min.svg
