@@ -1,6 +1,10 @@
 #big-integer-min <sup>[![Version Badge][2]][1]</sup>
 
-[![Build Status][3]][4] [![dependency status][5]][6]  [![dev dependency status][7]][8]
+[![Build Status][3]][4]
+[![dependency status][5]][6]
+[![dev dependency status][7]][8]
+[![License][license-image]][license-url]
+[![Downloads][downloads-image]][downloads-url]
 
 [![npm badge][11]][1]
 
@@ -41,4 +45,8 @@ Simply clone the repo, run `npm install`, and then run `npm test`.
 [9]: https://ci.testling.com/ljharb/big-integer-min.png
 [10]: https://ci.testling.com/ljharb/big-integer-min
 [11]: https://nodei.co/npm/big-integer-min.png?downloads=true&stars=true
+[license-image]: http://img.shields.io/npm/l/big-integer-min.svg
+[license-url]: LICENSE
+[downloads-image]: http://img.shields.io/npm/dm/big-integer-min.svg
+[downloads-url]: http://npm-stat.com/charts.html?package=big-integer-min
 
