@@ -1,8 +1,8 @@
 #big-integer-min <sup>[![Version Badge][npm-version-svg]][npm-url]</sup>
 
 [![Build Status][travis-svg]][travis-url]
-[![dependency status][5]][6]
-[![dev dependency status][7]][8]
+[![dependency status][deps-svg]][deps-url]
+[![dev dependency status][dev-deps-svg]][dev-deps-url]
 [![License][license-image]][license-url]
 [![Downloads][downloads-image]][downloads-url]
 
@@ -38,10 +38,10 @@ Simply clone the repo, run `npm install`, and then run `npm test`.
 [npm-version-svg]: http://vb.teelaun.ch/ljharb/big-integer-min.svg
 [travis-svg]: https://travis-ci.org/ljharb/big-integer-min.svg
 [travis-url]: https://travis-ci.org/ljharb/big-integer-min
-[5]: https://david-dm.org/ljharb/big-integer-min.svg
-[6]: https://david-dm.org/ljharb/big-integer-min
-[7]: https://david-dm.org/ljharb/big-integer-min/dev-status.svg
-[8]: https://david-dm.org/ljharb/big-integer-min#info=devDependencies
+[deps-svg]: https://david-dm.org/ljharb/big-integer-min.svg
+[deps-url]: https://david-dm.org/ljharb/big-integer-min
+[dev-deps-svg]: https://david-dm.org/ljharb/big-integer-min/dev-status.svg
+[dev-deps-url]: https://david-dm.org/ljharb/big-integer-min#info=devDependencies
 [9]: https://ci.testling.com/ljharb/big-integer-min.png
 [10]: https://ci.testling.com/ljharb/big-integer-min
 [11]: https://nodei.co/npm/big-integer-min.png?downloads=true&stars=true
