@@ -1,6 +1,6 @@
 #big-integer-min <sup>[![Version Badge][npm-version-svg]][npm-url]</sup>
 
-[![Build Status][3]][4]
+[![Build Status][travis-svg]][travis-url]
 [![dependency status][5]][6]
 [![dev dependency status][7]][8]
 [![License][license-image]][license-url]
@@ -36,8 +36,8 @@ Simply clone the repo, run `npm install`, and then run `npm test`.
 
 [npm-url]: https://npmjs.org/package/big-integer-min
 [npm-version-svg]: http://vb.teelaun.ch/ljharb/big-integer-min.svg
-[3]: https://travis-ci.org/ljharb/big-integer-min.svg
-[4]: https://travis-ci.org/ljharb/big-integer-min
+[travis-svg]: https://travis-ci.org/ljharb/big-integer-min.svg
+[travis-url]: https://travis-ci.org/ljharb/big-integer-min
 [5]: https://david-dm.org/ljharb/big-integer-min.svg
 [6]: https://david-dm.org/ljharb/big-integer-min
 [7]: https://david-dm.org/ljharb/big-integer-min/dev-status.svg
