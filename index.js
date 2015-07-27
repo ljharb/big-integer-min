@@ -1,9 +1,11 @@
+'use strict';
+
 var nextTick = require('just-next-tick');
 
-var toString = Object.prototype.toString;
+var toStr = Object.prototype.toString;
 
 var isFunction = function (value) {
-	return '[object Function]' === toString.call(value);
+	return toStr.call(value) === '[object Function]';
 };
 
 /* Big Integer Minimum
@@ -37,16 +39,12 @@ var bigIntegerMin = function bigIntegerMinimum(numberA, numberB) {
 			if (bNegative) {
 				smallest = numberB;
 			}
-		} else {
-			// both positive
-			if (lengthA > lengthB) {
-				// positive number with the least digits is smallest
-				smallest = numberB;
-			} else if (lengthA === lengthB) {
-				// lengths are the same; both positive
-				smallest = numberA < numberB ? numberA : numberB;
-			}
-
+		} else if (lengthA > lengthB) { // both positive
+			// positive number with the least digits is smallest
+			smallest = numberB;
+		} else if (lengthA === lengthB) {
+			// lengths are the same; both positive
+			smallest = numberA < numberB ? numberA : numberB;
 		}
 	}
 	return smallest;

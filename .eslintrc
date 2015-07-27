@@ -1,0 +1,11 @@
+{
+	"root": true,
+
+	"extends": "@ljharb",
+
+	"rules": {
+		"complexity": [2, 12],
+		"max-params": [2, 3],
+		"max-statements": [2, 17]
+	}
+}
