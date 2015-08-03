@@ -50,7 +50,7 @@ var bigIntegerMin = function bigIntegerMinimum(numberA, numberB) {
 	return smallest;
 };
 
-var bigIntegerMinDispatcher = function (numberA, numberB, callback) {
+var dispatcher = function (numberA, numberB, callback) {
 	if (typeof numberA !== 'string' || typeof numberB !== 'string') {
 		throw new TypeError('both arguments must be strings');
 	} else if (!digits.test(numberA) || !digits.test(numberB)) {
@@ -67,7 +67,7 @@ var bigIntegerMinDispatcher = function (numberA, numberB, callback) {
 		return bigIntegerMin(numberA, numberB);
 	}
 };
-bigIntegerMinDispatcher.method = bigIntegerMin;
+dispatcher.method = bigIntegerMin;
 
-module.exports = bigIntegerMinDispatcher;
+module.exports = dispatcher;
 
