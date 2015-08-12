@@ -35,7 +35,7 @@ bigIntegerMin('1', '2', function (error, min) {
 Simply clone the repo, run `npm install`, and then run `npm test`.
 
 [npm-url]: https://npmjs.org/package/big-integer-min
-[npm-version-svg]: http://vb.teelaun.ch/ljharb/big-integer-min.svg
+[npm-version-svg]: http://versionbadg.es/ljharb/big-integer-min.svg
 [travis-svg]: https://travis-ci.org/ljharb/big-integer-min.svg
 [travis-url]: https://travis-ci.org/ljharb/big-integer-min
 [deps-svg]: https://david-dm.org/ljharb/big-integer-min.svg
