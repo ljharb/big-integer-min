@@ -8,14 +8,15 @@ var isFunction = function (value) {
 	return toStr.call(value) === '[object Function]';
 };
 
-/* Big Integer Minimum
+/*
+ * Big Integer Minimum
  *
  * Pass in two strings that are otherwise valid integers, positive or negative.
  * No leading zeroes.
  */
 
-var digits = /^\-?[0-9]+$/;
-var leadingZeroes = /^\-?0+[^0]+$/;
+var digits = /^-?[0-9]+$/;
+var leadingZeroes = /^-?0+[^0]+$/;
 
 var bigIntegerMin = function bigIntegerMinimum(numberA, numberB) {
 	var aNegative = numberA.charAt(0) === '-';
@@ -60,12 +61,11 @@ var dispatcher = function (numberA, numberB, callback) {
 	}
 
 	if (isFunction(callback)) {
-		nextTick(function () {
+		return nextTick(function () {
 			callback(null, bigIntegerMin(numberA, numberB));
 		});
-	} else {
-		return bigIntegerMin(numberA, numberB);
 	}
+	return bigIntegerMin(numberA, numberB);
 };
 dispatcher.method = bigIntegerMin;
 
