@@ -8,9 +8,7 @@
 		"test": "npm run lint && node test.js && npm run coverage-quiet && npm run security",
 		"coverage": "covert test.js",
 		"coverage-quiet": "covert test.js --quiet",
-		"lint": "npm run jscs && npm run eslint",
-		"jscs": "jscs *.js",
-		"eslint": "eslint *.js",
+		"lint": "eslint .",
 		"security": "nsp package"
 	},
 	"repository": {
@@ -27,7 +25,6 @@
 		"just-next-tick": "^0.0.0"
 	},
 	"devDependencies": {
-		"jscs": "^2.1.0",
 		"tape": "^4.2.0",
 		"covert": "^1.1.0",
 		"eslint": "^1.1.0",
